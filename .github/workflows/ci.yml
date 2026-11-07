@@ -26,7 +26,7 @@ jobs:
       - run: npm run typecheck
       - run: npm test
       - run: npm run build
-      - name: Smoke test: ingest a trace over OTLP and open it
+      - name: "Smoke test: ingest a trace over OTLP and open it"
         run: |
           npm run migrate
           (npm start > /tmp/next.log 2>&1 &)
