@@ -1,0 +1,30 @@
+{
+  "set": "heldout",
+  "generated_at": "2026-11-07T11:21:50Z",
+  "rows": [
+    {
+      "trace_id": "d68616627e4c922c5b41526cbb399b8c",
+      "spans": 100002,
+      "windowed_first_rows_ms": 348.7,
+      "windowed_heap_mb": 6.4,
+      "full_first_rows_ms": 1043.3,
+      "full_heap_mb": 66.4
+    },
+    {
+      "trace_id": "bec9f6f4d65d6279d53a56b2c9bf1264",
+      "spans": 100008,
+      "windowed_first_rows_ms": 329.5,
+      "windowed_heap_mb": 6.0,
+      "full_first_rows_ms": 1275,
+      "full_heap_mb": 60.3
+    },
+    {
+      "trace_id": "e2c628b3c4c33301636f76da24682528",
+      "spans": 99678,
+      "windowed_first_rows_ms": 370.6,
+      "windowed_heap_mb": 5.9,
+      "full_first_rows_ms": 1137.9,
+      "full_heap_mb": 59.0
+    }
+  ]
+}
