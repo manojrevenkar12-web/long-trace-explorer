@@ -1,0 +1,84 @@
+{
+  "sha256": "8f2c5cd4b9cb8575c04183602a4850f4177b9288634f56b5e70009440dfa0292",
+  "pinned_at": "2026-11-07T11:20:19.023Z",
+  "plan": {
+    "shapes": [
+      {
+        "key": "fanout",
+        "shape": {
+          "name": "batch-enricher",
+          "subAgentRate": 0.03,
+          "maxDepth": 2,
+          "toolsPerStep": [
+            1,
+            2
+          ],
+          "errorRate": 0.08,
+          "fanOutRate": 0.08,
+          "fanOutSize": [
+            200,
+            2500
+          ],
+          "idleGap": [
+            0,
+            1
+          ],
+          "dropParentRate": 0,
+          "ioScale": 0.6
+        }
+      },
+      {
+        "key": "deep",
+        "shape": {
+          "name": "recursive-planner",
+          "subAgentRate": 0.45,
+          "maxDepth": 40,
+          "toolsPerStep": [
+            1,
+            2
+          ],
+          "errorRate": 0.03,
+          "fanOutRate": 0,
+          "fanOutSize": [
+            0,
+            0
+          ],
+          "idleGap": [
+            0,
+            1
+          ],
+          "dropParentRate": 0,
+          "ioScale": 0.8
+        }
+      },
+      {
+        "key": "lossy",
+        "shape": {
+          "name": "overnight-migration",
+          "subAgentRate": 0.1,
+          "maxDepth": 5,
+          "toolsPerStep": [
+            1,
+            3
+          ],
+          "errorRate": 0.06,
+          "fanOutRate": 0.02,
+          "fanOutSize": [
+            50,
+            300
+          ],
+          "idleGap": [
+            5,
+            600
+          ],
+          "dropParentRate": 0.004,
+          "ioScale": 1.2
+        }
+      }
+    ],
+    "spans": 100000,
+    "seed": 9001,
+    "repeats": 5,
+    "search": "rate limit"
+  }
+}

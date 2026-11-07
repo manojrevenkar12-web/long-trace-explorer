@@ -1,0 +1,57 @@
+{
+  "_notes": {
+    "children_page": "children returned per request; a branch with more shows a 'load more' row",
+    "auto_expand_depth": "on open, the critical path is expanded this deep so the first screen shows where time went",
+    "io_preview_bytes": "input/output shown in the detail panel before 'show all'",
+    "bench": "sizes for the development shape; held-out shapes, size and seed are pinned by npm run bench -- --pin before their only run"
+  },
+  "children_page": 200,
+  "auto_expand_depth": 6,
+  "search_limit": 100,
+  "io_preview_bytes": 16384,
+  "full_trace_row_limit": 1000000,
+  "projects": [
+    {
+      "id": "demo",
+      "public_key": "pk-lf-demo",
+      "secret_key": "sk-lf-demo"
+    }
+  ],
+  "model_prices_usd_per_mtok": {
+    "gpt-4.1": {
+      "input": 2.0,
+      "output": 8.0
+    },
+    "gpt-4.1-mini": {
+      "input": 0.4,
+      "output": 1.6
+    },
+    "claude-sonnet-4-5": {
+      "input": 3.0,
+      "output": 15.0
+    },
+    "claude-haiku-4-5": {
+      "input": 1.0,
+      "output": 5.0
+    }
+  },
+  "bench": {
+    "sizes": [
+      1000,
+      10000,
+      100000,
+      300000
+    ],
+    "full_with_io_max": 10000,
+    "repeats": 5,
+    "dev_seed": 7,
+    "heldout_seed": 9001,
+    "heldout_shapes": [
+      "fanout",
+      "deep",
+      "lossy"
+    ],
+    "heldout_spans": 100000,
+    "walk_max": 10000
+  }
+}
